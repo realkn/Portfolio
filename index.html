@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Portfolio: liveries, clothing, and design work." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="#">YourName</a>
+    </div>
+    <nav class="nav">
+      <button id="menuBtn" class="menu-btn" aria-label="menu">☰</button>
+      <ul id="navList" class="nav-list">
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://github.com/USERNAME/REPO" target="_blank" rel="noopener">Source</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Designs, Liveries & Clothing</h1>
+        <p>Clean, bold visuals for vehicles, apparel and branding. Scroll to view my work.</p>
+        <a class="cta" href="#portfolio">View Portfolio</a>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio section">
+      <div class="container">
+        <h2>Portfolio</h2>
+
+        <div class="controls">
+          <select id="categorySelect" aria-label="Filter category">
+            <option value="all">All</option>
+            <option value="liveries">Liveries</option>
+            <option value="clothing">Clothing</option>
+            <option value="other">Other</option>
+          </select>
+          <input id="searchInput" placeholder="Search titles or tags..." />
+        </div>
+
+        <div id="gallery" class="gallery" aria-live="polite">
+          <!-- JS will populate -->
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container">
+        <h2>About</h2>
+        <p>I'm a visual designer focusing on liveries, apparel, and branding. I build concepts that read strong at scale and in motion.</p>
+      </div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="container">
+        <h2>Services</h2>
+        <ul>
+          <li>Custom liveries & wraps</li>
+          <li>Clothing design & mockups</li>
+          <li>Branding & commission work</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Prefer email or Discord. Fill in the form or email <a href="mailto:you@example.com">you@example.com</a></p>
+        <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+          <label>
+            Name
+            <input name="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> YourName — Built with ❤️ · Hosted on GitHub Pages</small>
+    </div>
+  </footer>
+
+  <!-- Lightbox modal -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="closeLb" class="lb-close" aria-label="Close">✕</button>
+    <div class="lb-content">
+      <img id="lbImg" alt="" />
+      <div id="lbMeta" class="lb-meta">
+        <h3 id="lbTitle"></h3>
+        <p id="lbDesc"></p>
+        <p id="lbTags"></p>
+      </div>
+    </div>
+    <button id="prevBtn" class="lb-nav lb-prev" aria-label="Previous">◀</button>
+    <button id="nextBtn" class="lb-nav lb-next" aria-label="Next">▶</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
